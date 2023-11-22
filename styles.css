@@ -1,0 +1,89 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #e91e63, #f4f4f4);
+
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    width: 80%;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.animated-list {
+    list-style: none;
+    padding: 0;
+}
+
+.animated-list li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-list li:nth-child(odd) {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+.animated-list li:nth-child(even) {
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 15px 0;
+    transition: background-color 0.3s ease;
+}
+
+a i {
+    margin-right: 10px;
+}
+
+a:hover {
+    background-color: #e91e63;
+}
